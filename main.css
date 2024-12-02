@@ -1,0 +1,390 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('..fonts/Roboto-Black.ttf');
+}
+@font-face {
+    font-family: 'Quiksand';
+    src: url('..fonts/Quicksand-VariableFont_wght.ttf') ;
+}
+a{
+    text-decoration: none;
+    margin-right: 30px;
+    cursor: pointer;
+    user-select: text;
+    position: relative;
+    color : rgb(255, 255, 255);
+    transition: color 0.1;
+   
+    font-size: 20px;
+    
+}
+header {
+  background-color: #4a4a4a;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1px 20px; 
+    box-shadow:  0 10px 2px rgba(0, 0, 0, 0.1); 
+    height: 13vh;
+    z-index: 1000; /* Шапка всегда поверх */
+  }
+
+  
+
+  
+  .text-box {
+    margin-left: 44vw;
+    margin-top: 50vh;
+}
+
+.btn:link,
+.btn:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 10px 25px;
+    display: inline-block;
+    border-radius: 100px;
+    transition: all .2s;
+    position: absolute;
+    right:300px;  
+    top: 30px;     
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(31, 233, 82, 0.2);
+}
+
+.btn:active {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+
+.btn-white {
+    background-color: #40bb69; 
+    color: #ffffff;
+    border: 2px solid #31b477; 
+}
+
+.btn-white::after {
+    background-color: #fff;
+}
+
+.btn i {
+    margin-right: 8px; /* Уменьшен отступ между иконкой и текстом */
+    font-size: 14px; /* Размер иконки */
+}
+
+.btn:hover::after {
+    transform: scaleX(1.4) scaleY(1.6);
+    opacity: 0;
+}
+
+.button {
+    animation: moveInBottom 5s ease-out;
+    animation-fill-mode: backwards;
+}
+
+@keyframes moveInBottom {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+
+  #logo {
+    width: 93px; /* Задайте ширину логотипа */
+    height: auto; /* Высота автоматически рассчитывается, чтобы сохранить пропорции */
+    margin-right: 20px; /* Отступ от других элементов */
+  }
+
+  #info {
+
+    position: absolute;
+    top: 10px; /* Отступ сверху */
+    right: 20px; /* Отступ справа */
+    
+  }
+
+  #info li {
+    margin-right: 20px;
+    cursor: pointer;
+    font-family: 'Quksandium', sans-serif;
+    position: relative;
+    color : rgb(255, 255, 255);
+    transition: color 0.1;
+   left: 700px;
+  }
+
+
+
+ul{
+display: flex;
+    list-style-type: none;
+  
+}
+#rozdely{
+    position: absolute;
+    top: 70px;
+    left: 300px;
+}
+
+
+
+#info li:hover, #rozdely li:hover , a:hover  {
+    color: #ffd700; /* Золотой цвет */
+  }
+
+
+body{
+    background: linear-gradient(90deg, #2c2c2c, #4a4a4a);
+    height: 850vh;
+    user-select: none;
+}
+
+#Pizza{
+    color:#f5f5dc;
+    position: absolute;
+    top: 130px;
+    left: 190px;
+    font-size: 40px;
+}
+
+#Бокси{
+    color:#f5f5dc;
+    position: absolute;
+    top: 2100px;
+    left: 190px;
+    font-size: 40px;
+}
+
+#Десерти{
+    color:#f5f5dc;
+    position: absolute;
+   top: 4020px;
+    left: 190px;
+    font-size: 40px;
+}
+
+
+#Напої{
+    color:#f5f5dc;
+    position: absolute;
+   top: 4960px;
+    left: 190px;
+    font-size: 40px;
+}
+
+.img{
+    width: 210px;
+}
+
+
+
+
+.img:hover  , .ImageWater:hover {
+    transform: scale(1.05); /* Увеличение картинки при наведении */
+}
+
+:root {
+    --green: #1fa30d;
+    --gray:#bbbbbb;
+  }
+  
+  * {
+    font-family: 'Roboto', sans-serif;
+  }
+  
+
+  button {
+    margin-top: 15px;
+    outline: none;
+    height: 40px;
+    text-align: center;
+    width: 130px;
+    border-radius: 70px;
+    background: #f5f5dc;
+    border: 2px solid var(--green);
+    color: var(--green);
+    letter-spacing: 1px;
+    text-shadow: 0;
+    font-size: 13px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.25s ease;
+  }
+  
+  button:hover {
+    color: rgb(245, 243, 243);
+    background: var(--green);
+  }
+  
+  button:active {
+    letter-spacing: 2px;
+  }
+  
+  button::after {
+    content: "Замовити";
+  }
+  
+  .onclic {
+    width: 40px;
+    border-color: var(--gray);
+    border-width: 3px;
+    font-size: 0;
+    border-left-color: var(--green);
+    animation: rotating 2s 0.25s linear infinite;
+  }
+  
+  .onclic::after {
+    content: "";
+  }
+  
+  .onclic:hover {
+    color: var(--green);
+    background: white;
+  }
+  
+  .validate {
+    font-size: 13px;
+    color: white;
+    background: var(--green);
+  }
+  
+  .validate::after {
+    font-family: 'FontAwesome';
+    content: "\f00c";
+  }
+  
+  @keyframes rotating {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+.name {
+    font-size: 28px;
+    color: #f1f1bc;
+}
+
+.description{
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+    color:#c0c075;
+
+}
+
+.price{
+    font-size: 24px;
+    color: #f1f1bc;
+    margin: 10px 0;
+}
+.price-Water{
+    margin-top: 10px;
+}
+.container-Water{
+    top : 5px;
+}
+
+
+.pizza-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 столбца */
+    gap: 40px;
+    width: 80%;
+    margin: 200px auto 0 auto; /* Центровка по горизонтали */
+   margin-left: 210px;
+}
+
+.Бокси-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 столбца */
+    gap: 40px; /* расстояние между элементами */
+    width: 80%; /* ширина контейнера */
+    margin: 280px auto 0 auto; /* отступ сверху и автоцентрирование */
+    margin-left: 210px;
+}
+.Десерти-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 столбца */
+    gap: 40px; /* расстояние между элементами */
+    width: 80%; /* ширина контейнера */
+    margin: 180px auto 0 auto; /* отступ сверху и автоцентрирование */
+    margin-left: 250px;
+}
+
+.Water-container{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 столбца */
+    gap: 40px; /* расстояние между элементами */
+    width: 80%; /* ширина контейнера */
+    margin: 180px auto 0 auto; /* отступ сверху и автоцентрирование */
+    margin-left: 250px;
+}
+
+.Бокс-card, .pizza-card , .Десерти-card , .Water-card{
+    text-align: center;
+    border-radius: 10px;
+    color: #f5f5dc;
+    font-size: 18px;
+    min-height: 300px;
+}
+
+
+footer {
+ position: absolute;
+ top: 6200px;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+ 
+  background: linear-gradient(90deg, #1a1a1a, #333333);
+
+  padding: 10px 0;
+  box-shadow:  0 10px 2px rgba(0, 0, 0, 0.1); 
+  height: 90vh;
+}
+ footer p{
+margin-top: 30px;
+  color: white;
+  margin-left: 210px;
+}
+
+.Soc{
+ background-color: white;
+  width: 25px;
+  margin-bottom: -5px;
+  margin-right: 7px
+}
+
+#map{
+
+  margin-left: 910px;
+  margin-top: -300px;
+}
+.link{
+  
+  font-size: 15px;
+  left: 700px;
+  font-family: 'Quksand' sans-serif;
+}
+
